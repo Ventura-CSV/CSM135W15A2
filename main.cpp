@@ -1,14 +1,14 @@
 #include "main.hpp"
-using namespace std;
 
 int main()
 {
 	const int N = 10;
-	int array[N] = {25, 10, 15, 30, 35, 40, 45, 55, 20, 50};
+	Students s[N];
 
-	bubbleSort(array, N);
-	for (int v : array)
-		cout << v << "\t";
-	cout << endl;
-	// Sorted List :10      15      20      25      30      35      40      45      50      55
+	makeStudents(s, N);
+	cout << "Initial Student's Struct Array \n";
+	printStudents(s, N);
+	bubbleSort(s, N);
+	cout << "After Sorting \n";
+	printStudents(s, N);
 }
